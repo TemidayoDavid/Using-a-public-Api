@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+<% if(locals.data){ %>
+<div class="container">
+    
+    <div class="joke jokeData">
+        <h1 class="fontJoke">  <%= data %>  </h1>
+        <p>Category: <%= theCategory %></p>
+        <p>  we hoped you laughed 🙃</p>
+        
+        <a href="/"><button type="button" class="jokeBtn btn">refresh</button></a> 
+    </div>
+   
+          
+ </div>
+<% }else{ %>
+<% if(locals.error){ %>
+
+  <p class="errorHandle">  <%= error  %></p>
+  <a href="/"><button type="button" class="jokeBtn btn">refresh</button></a> 
+<% }else{ %>
+    <p class="errorHandle">  Ahh, our lovely API friends don't have a joke for this query. Try again</p>
+    <a href="/"><button type="button" class="jokeBtn btn">refresh</button></a> 
+<% } %>
+<% } %>
+
+</html>

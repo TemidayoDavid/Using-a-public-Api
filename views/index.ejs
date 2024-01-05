@@ -1,0 +1,127 @@
+<%- include("partials/header.ejs") %>
+
+
+<body>
+
+    <div class="container">
+       <% if(locals.user){ %> 
+
+          <div class="textDiv1">
+
+            <h1> Hello, <%= user %>  </h1>
+            
+          </div>
+
+        
+            <form action="/joke" id="" class="formA" method="post">
+
+                <div class="typeOfJoke">
+                    <p class="textshadow">  select your joke preference </p>
+
+                    <input type="checkbox" id="programming" class="catA" name="prefered" value="Programming">
+                    <label for="Programming">Programming</label>
+                    <input type="checkbox" id="misc" class="catA" name="prefered" value="Misc">
+                    <label for="Misc">Misc</label>
+                    <input type="checkbox" id="dark" class="catA" name="prefered" value="Dark">
+                    <label for="Dark">Dark</label>
+                    <input type="checkbox" id="pun" class="catA" name="prefered" value="Pun">
+                    <label for="Pun">Pun</label>
+                    <input type="checkbox" id="spooky" class="catA" name="prefered" value="Spooky">
+                    <label for="Spooky">Spooky</label>
+                    <input type="checkbox" id="christmas" class="catA" name="prefered" value="Christmas">
+                    <label for="Christmas">Christmas</label>
+                    <input type="checkbox" id="any" class="catA" name="prefered" value="Any">
+                    <label for="Any">Any</label>
+                   
+            
+                </div>
+
+                <div class="blackList">
+                     
+                    <p class="textshadow">  what joke should i blacklist🤧 </p>
+                    <input type="checkbox" id="nsfw" class="catB" name="blacklist" value="nsfw">
+                    <label for="nsfw">nsfw</label>
+                    <input type="checkbox" id="religious" class="catB" name="blacklist" value="religious">
+                    <label for="religious">religious</label>
+                    <input type="checkbox" id="political" class="catB" name="blacklist" value="political">
+                    <label for="political">political</label>
+                    <input type="checkbox" id="racist" class="catB" name="blacklist" value="racist">
+                    <label for="racist">racist</label>
+                    <input type="checkbox" id="sexist" class="catB" name="blacklist" value="sexist">
+                    <label for="sexist">sexist</label>
+                    <input type="checkbox" id="explicit" class="catB" name="blacklist" value="explicit">
+                    <label for="explicit">explicit</label>
+                    <input type="checkbox" id="explicit" class="catB" name="blacklist" value="">
+                    <label for="explicit">None</label>
+                    <input hidden type="text" id="amount" class="catB" name="amount"  value="single" >
+                    <label hidden for="explicit">Amount of Joke</label>
+                    <input hidden type="submit" value="Submit" class="blackListBtn btn">
+                    
+        
+                </div>
+
+                
+            </form>
+        
+
+        <% }else{ %>
+        <div class="textDiv2">
+            <h1> Hello  </h1>
+            <p class="textshadow"> what is your name? </p>
+        </div>
+
+        <div class="userName">
+            <form action="/post-userName" method="post">
+             <input class="userinput" type="text" name="userName" placeholder="be creative..." required>   <br>
+             <input type="submit" value="Submit" class="userNameBtn btn">
+
+            </form>
+          
+          
+    
+        </div>
+       <%  } %>
+
+
+        
+
+        
+        
+
+        <div class="joke">
+            <h1></h1>
+            <button type="button" class="refreshBtn btn">refresh</button>
+        </div>
+       
+        <div class="note">
+            <p>the developer used the JokeApi to build this webapp. <br> Visit here for more info https://v2.jokeapi.dev/joke/</p>
+        </div>
+
+    </div>
+
+
+<script>
+    //This line of code is to toggle on the display of the check-boxes on the form options
+$(".catA").click(function(){
+    $(".typeOfJoke").toggle();
+    $(".blackList").toggle();
+
+})
+
+   //This is to momentarily hide the display of the refresh button until the name button is clicked
+$(".userNameBtn").click(function(){
+$("refreshBtn").toggle();
+})
+
+  //This triggers the submit button after the user checks an option in the checboxes
+$(".catB").click(function (){
+    $(".blackListBtn").trigger("click");
+})
+
+
+</script>
+
+</body>
+
+
+</html>

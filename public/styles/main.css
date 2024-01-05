@@ -1,0 +1,153 @@
+:root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+    
+   
+   
+    /* background-color: aqua; */
+    background: url("../images/v904-nunny-012.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode:screen;
+    
+    
+    
+    
+    
+}
+
+ .blackList, .refreshBtn {
+display: none ;
+
+} 
+
+.container {
+    background: url("../images/v904-nunny-012.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-blend-mode:multiply; */
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 3px;
+    position: relative;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background-color: azure;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container:hover{
+    box-shadow: 0 4px 8px 0 rgba(97, 61, 255, 0.2), 0 6px 20px 0 rgba(253, 141, 141, 0.19);
+    border-radius: 30px;
+}   
+
+.joke{
+    margin-top: 100px;
+}
+
+.jokeData{
+    margin-top: 0px;
+}
+
+.fontJoke{
+    font-size: large;
+    font-family: 'Cardo', serif;
+    font-style: italic;
+}
+
+.btn{
+    border-radius: 5px;
+    border: 1px;
+    border-color: aquamarine;
+}
+
+.btn:hover{
+    box-shadow: 0 4px 8px 0 rgba(97, 61, 255, 0.2), 0 6px 20px 0 rgba(253, 141, 141, 0.19);
+}
+
+.userName  {
+    margin-top: 0px;
+}
+
+.userNameBtn {
+    margin-top: 5px;
+}
+
+.userinput {
+    border-radius: 5px;
+    border: 0px ;
+    font-style: italic;
+    height: 20px;
+    width: 200px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 247, 238);
+    
+    
+}
+
+.userinput[type=text]{
+    padding: 6px  6px;
+    margin: 8px 0;
+    color: rgb(142, 125, 190);
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: rgb(142, 125, 190);
+    font-size:50px;
+    text-shadow: 2px 2px 5px rgb(255, 247, 247);
+    
+}
+
+.textDiv1{
+    margin-bottom: 20px;
+    position: relative;
+    top: 30px;
+    line-height: 1;
+}
+
+p, .btn, form {
+    font-family: 'Cardo', serif;
+    color: rgb(142, 125, 190);
+    
+}
+
+.note{
+    font-size: 12px;
+    font-style: italic;
+    position:relative;
+    bottom: 5px;
+    color: black;
+    text-shadow: black;
+}
+
+label{
+    font-size: 14px;
+}
+
+.textshadow{
+    text-shadow: 2px 2px 5px rgb(255, 247, 247);
+}
+
+.errorHandle{
+    font-size: 25px;
+    font-family: 'Cardo', serif;
+}
